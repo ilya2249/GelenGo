@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GelenGo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+ 
+    <video autoplay loop muted class="night_video" id="night">
+        <source src="{% static 'videos/video3.mp4'%}" type="video/mp4">
+        </source>
+    </video>
+
+    <video autoplay loop muted class="day_video" id="day">
+        <source src="{% static 'videos/video2.mp4'%}" type="video/mp4">
+        </source>
+    </video>
+
+
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="first_page">
+            <header>
+                <div class="wrapper_top">
+                    <div class="gelen_logo" id = 'gl'><img src="{% static 'img/gelengo.png'%}"></div>
+                    <nav>
+                        <ul>
+                            <li><a href="">СОБЫТИЯ</a></li>
+                            <li><a href="{% url 'wist' %}">ГДЕ ОСТАНОВИТЬСЯ</a></li>
+                            <li> <a href="">КУДА ПОЙТИ</a>
+                                <ul>
+                                    <div class="marker a">▸</div>
+                                    <div class="marker b">▸</div>
+                                    <div class="marker c">▸</div>
+                                    <li><a href="">Пляжи</a></li>
+                                    <li>
+                                        <div id="m"><a href="">Достопримечательности</a></div>
+                                        <ul class="list3 a">
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div id="m"><a href="{% url 'chill' %}">Развлечения</a></div>
+                                        <ul class="list3">
+                                            <li><a href="">Аквапарки</a></li>
+                                            <li><a href="">Зоопарки</a></li>
+                                            <li><a href="">Кинотеатры</a></li>
+                                            <li><a href="">Парки аттракционов</a></li>
+                                            <li><a href="">Развлекательные комплексы</a></li>
+                                            <li><a href="">Спортивные комплексы и стадионы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div id="m"><a href="">Культурная жизнь</a></div>
+                                        <ul class="list3 b">
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Экстремальный отдых</a></li>
+                                    <li>
+                                        <div id="m"><a href="">Отдых на природе</a></div>
+                                        <ul class="list3 c">
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                            <li><a href="">anorum</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="">Здоровье и красотa</a></li>
+                                    <li><a href="">Конференц-площадки</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="">ГДЕ ПОЕСТЬ</a></li>
+                            <li><a href="">ЭКСКУРСИИ</a></li>
+                            
+                            <li> <div class="btn-toggle">
+                        <div class="back">
+                            <div class="logo_sun"><img id = "sun" src="{% static 'img/sun.png'%}" width="50" height="50px">
+                                <div class="logo_moon"><img id = "moon" src="{% static 'img/moon.png'%}" width="50" height="50px">
+                                </div>
+                            </div>
+                        </div></li>
+                        </ul>
+                        
+                    </nav>
+
+                   
+            </header>
+            <div class="main_container">
+            <div class="main__text" id='mt'>ИСПОЛНИ СВОЮ МЕЧТУ В GELENDZHIKE
+            </div>
+         
+                <form class="search">
+                    <input type="text" id="elastic" placeholder="Что вы ищете?" class="search-input">
+
+                    <ul class="elastic" id="list2">
+                        <li><a href="https://yandex.ru/search/?clid=1882628&text=lorem&l10n=ru&lr=10990">lorem</a></li>
+                        <li><a href="https://yandex.ru/search/?clid=1882628&text=lorem&l10n=ru&lr=10990">anorum</a></li>
+                        <li>expectrum</li>
+                        <li>avakado</li>
+                        <li>bruklin</li>
+                    </ul>
+            </form>
+
+
+
+
+
+        </div></div>
+
+
+        <div class="second_page">
+
+
+
+            <div class="cards">
+                <ul>
+                    <li><a href="">
+                            <div class="img a"><img src="{% static 'img/card1.png'%}">
+                                <div id="t" class="text1">ВИДЕОГИД «ГОРОД, ГДЕ<br> СБЫВАЮТСЯ МЕЧТЫ»</div>
+                                <div id="l" class="logo1"><img src="{% static 'img/logo1.png'%}"></div>
+                            </div>
+                        </a></li>
+                    <li><a href="">
+                            <div class="img b"><img src="{% static 'img/card2.png'%}">
+                                <div id="t" class="text2">ИНТЕРЕСНОЕ О <br>ГЕЛЕНДЖИКЕ</div>
+                                <div id="l" class="logo2"><img src="{% static 'img/logo2.png'%}"></div>
+                            </div>
+                        </a></li>
+                    <li><a href="">
+                            <div class="img c"><img src="{% static 'img/card3.png'%}">
+                                <div id="t" class="text3">ОЗДОРОВЛЕНИЕ <br>НА КУРОРТЕ</div>
+                                <div id="l" class="logo3"><img src="{% static 'img/logo3.png'%}"></div>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="cards2">
+                <ul>
+                    <li><a href="">
+                            <div class="img2 a"><img src="{% static 'img/card4.png'%}">
+                                <div id="t" class="text4">ОСНОВНЫЕ ВИДЫ ТУРИЗМА <br> В ГЕЛЕНДЖИКЕ</div>
+                                <div id="l" class="logo4"><img src="{% static 'img/logo4.png'%}"></div>
+
+                            </div>
+                        </a></li>
+                    <li><a href="">
+                            <div class="img2 b"><img src="{% static 'img/card5.png'%}">
+                                <div id="t" class="text5">ТУРИСТИЧЕСКИЕ<br>МАРШРУТЫ</div>
+                                <div id="l" class="logo5"><img src="{% static 'img/logo5.png'%}"></div>
+                        </a></li>
+                    <li><a href="">
+                            <div class="img2 c"><img src="{% static 'img/card6.png'%}">
+                                <div id="t" class="text6">ТОПОВЫЕ МЕСТА <br> ГОРОДА</div>
+                                <div id="l" class="logo6"><img src="{% static 'img/logo6.png'%} "width="170" height="100px"></div>
+                        </a></li>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="third_page">
+            <div class="events">СОБЫТИЯ
+                <div class="line"></div> </div>
+            <div class="container2" id = "c2">
+               
+               
+                <div class="box1">
+                    <div class="event_img"><img src="{% static 'img/leps.png'%}" width="300" height="200px" style = 'border-radius: 19px 19px 0px 0px;'></div>
+                    <div class="container-not-image"id='cni'>
+                    <div class="name">ГРИГОРИЙ ЛЕПС</div>
+                    <div class="type">концерт</div>
+                    <div class="container3">
+
+                        <div class="Date_box">
+                            <div class="logo_date"><img src="{% static 'img/date.png'%}"></div>
+                            <div class="Date">Date</div>
+                        </div>
+                        <div class="Coin_box">
+                            <div class="logo_coin"><img src="{% static 'img/coin.png'%}"></div>
+                            <div class="coin">Coin</div>
+                        </div>
+                        <div class="Geoloc_box">
+                            <div class="geoloc_logo"><img src="{% static 'img/geoloc.png'%}"></div>
+                            <div class="geoloc">geoloc</div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+                </div>
+                <div class="box2">
+                    <div class="event_img"><img src="{% static 'img/mary.png'%}" width="300" height="200px" style = 'border-radius: 19px 19px 0px 0px;'></div>
+                    <div class="container-not-image"id='cni'>
+                    <div class="name">МАРИ КРАЙМБРЕРИ</div>
+                    <div class="type">концерт</div>
+                    <div class="container3">
+
+                        <div class="Date_box">
+                            <div class="logo_date"><img src="{% static 'img/date.png'%}"></div>
+                            <div class="Date">Date</div>
+                        </div>
+                        <div class="Coin_box">
+                            <div class="logo_coin"><img src="{% static 'img/coin.png'%}"></div>
+                            <div class="coin">Coin</div>
+                        </div>
+                        <div class="Geoloc_box">
+                            <div class="geoloc_logo"><img src="{% static 'img/geoloc.png'%}"></div>
+                            <div class="geoloc">geoloc</div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <div class="box3">
+                    <div class="event_img"><img src="{% static 'img/balet.png'%}" width="300" height="200px" style = 'border-radius: 19px 19px 0px 0px;'></div>
+                    <div class="container-not-image"id='cni'>
+                    <div class="name">БАЛЕТ «ЖИЗЕЛЬ»</div>
+                    <div class="type">театр</div>
+                    <div class="container3">
+
+                        <div class="Date_box">
+                            <div class="logo_date"><img src="{% static 'img/date.png'%}"></div>
+                            <div class="Date">Date</div>
+                        </div>
+                        <div class="Coin_box">
+                            <div class="logo_coin"><img src="{% static 'img/coin.png'%}"></div>
+                            <div class="coin">Coin</div>
+                        </div>
+                        <div class="Geoloc_box">
+                            <div class="geoloc_logo"><img src="{% static 'img/geoloc.png'%}"></div>
+                            <div class="geoloc">geoloc</div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="last_page">
+            <div id="news" class="news">НОВОСТИ
+                <div class="line"></div>
+            </div>
+            <div class="container_news" id="cn"id='cni'>
+                <div class="box4">
+                    <div class="event_img"><img src="{% static 'img/news1.png'%}" width="300" height="200px"></div>
+                    <div class="container-not-image">
+                    <div class="text_f">В Геленджике отдохнули более 1,6 миллиона человек</div>
+                    <div class="text_s">Такие данные приводит глава города Алексей Богодистов на своей странице в сети
+                        «ВКонтакте»: «Летний сезон в Геленджике сейчас в самом разгаре. Единовременно на курорте
+                        находятся более 92 тысячи отдыхающих.</div>
+                    <div class="container4">
+                        <div class="date_news">21.07.2023</div>
+                        <div class="type_news">Общество</div>
+                    </div></div>
+                </div>
+                <div class="box5"id='cni'>
+                    <div class="event_img"><img src="{% static 'img/news2.png'%}" width="300" height="200px"></div>
+                    <div class="container-not-image">
+                    <div class="text_f">Кинофестиваль «Маяк» под патронажем Романа Абрамовича пройдет в октябре в
+                        Геленджике</div>
+                    <div class="text_s">Пилотный кинофестиваль «Маяк» пройдет в Геленджике с 5 по 9 октября.
+                        Организаторы планируют, что он станет ежегодным</div>
+                    <div class="container4">
+                        <div class="date_news">06.07.2023</div>
+                        <div id="culture" class="type_news">Культура</div>
+                    </div></div>
+                </div>
+                <div class="box6"id='cni'
+                
+                >
+                    <div class="event_img"><img src="{% static 'img/news3.png'%}" width="300" height="200px"></div>
+                    <div class="container-not-image">
+                    <div class="text_f">Черное море в районе Геленджика прогрелось до <br> +26 °C</div>
+                    <div class="text_s">По данным Краснодарского центра по гидрометеорологии и мониторингу окружающей
+                        среды, 26 июня теплее всего вода в Геленджике и в Новороссийске — 26 °C и 25 °C соответственно.
+                    </div>
+                    <div class="container4">
+                        <div class="date_news">26.06.2023</div>
+                        <div class="type_news">Общество</div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="{% static 'js/index.js' %}"></script>
