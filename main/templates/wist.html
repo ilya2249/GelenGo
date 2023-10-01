@@ -8,30 +8,30 @@
     <title>GelenGo/hotel</title>
     <link rel="stylesheet" href="{% static 'css/style_wist.css' %}">
     <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-  
+
 </head>
 
 <body>
-    
+
     <div id="wrappers" class="wrappers">
         <div class="container1">
-        <div id="place_screen">
-            <div class="background_imgs">
-                <img src="imgs_screen\img_primorie1.png">
-                <img src="imgs_screen\img_primorie2.png">
-                <img src="imgs_screen\img_primorie3.png">
-                <img src="imgs_screen\img_primorie4.png">
-                <img src="imgs_screen\img_primorie5.png">
-                <img src="imgs_screen\img_primorie6.png">
-                <img src="imgs_screen\img_primorie7.png">
-                <img src="imgs_screen\img_primorie8.png">
+            <div id="place_screen">
+                <div class="background_imgs">
+                    <img src="imgs_screen\img_primorie1.png">
+                    <img src="imgs_screen\img_primorie2.png">
+                    <img src="imgs_screen\img_primorie3.png">
+                    <img src="imgs_screen\img_primorie4.png">
+                    <img src="imgs_screen\img_primorie5.png">
+                    <img src="imgs_screen\img_primorie6.png">
+                    <img src="imgs_screen\img_primorie7.png">
+                    <img src="imgs_screen\img_primorie8.png">
 
 
-            </div>
-            <div class="name_hotel">ПРИМОРЬЕ GRAND RESORT HOTEL
+                </div>
+                <div class="name_hotel">ПРИМОРЬЕ GRAND RESORT HOTEL
+                </div>
             </div>
         </div>
-    </div>
         <div class="wrapper_top">
             <div class="text_top">МЕСТА РАЗМЕЩЕНИЯ</div>
             <div class="line"></div>
@@ -41,7 +41,7 @@
             <div class="list">
                 <div class="text">Фильтрация</div>
                 <ul id="list">
-                    <li> <span class="text1"><img src="{% static 'img/caret.png'%}"id="caret_a">
+                    <li> <span class="text1"><img src="{% static 'img/caret.png'%}" id="caret_a">
                             Тип размещения</span>
                         <div class="line_list"></div>
                         <nav1 data-category="type">
@@ -59,7 +59,7 @@
                             </ul>
                         </nav1>
                     </li>
-                    <li><span class="text2"><img src="{% static 'img/caret.png'%}"id="caret_b">Район</span>
+                    <li><span class="text2"><img src="{% static 'img/caret.png'%}" id="caret_b">Район</span>
                         <div class="line_list"></div>
                         <nav2 data-category="location">
                             <ul id="list2">
@@ -71,7 +71,7 @@
                         </nav2>
 
                     </li>
-                    <li><span class="text3"><img src="{% static 'img/caret.png'%}"id="caret_c">Категория объекта</span>
+                    <li><span class="text3"><img src="{% static 'img/caret.png'%}" id="caret_c">Категория объекта</span>
                         <div class="line_list"></div>
                         <nav3 data-category="category">
                             <ul id="list3">
@@ -87,23 +87,27 @@
 
             </div>
             <div class="container">
-                
+
                 {% for place in places %}
-                <div id = "p1" class="panel"></div>
-                <div id = "b1" class="box {{place.geo.code}} {{place.hotel.code}} {{place.star.code}}">
+                <div id="p1" class="panel"></div>
+                <div id="b1" class="box {{place.geo.code}} {{place.hotel.code}} {{place.star.code}}">
                     <div class="img_place"><img src="{{ place.img.url }}" width="351" height="200px"
                             style="border-radius: 15px 15px 0px 0px;">
                         <div class="name">{{place.name}}</div>
                         <div class="place">{{place.distance}} км от центра</div>
                         <div class="type">{{place.type_place.name}}</div>
-                        <div class="block"style="top: 310px; position: absolute;">
-                        <div class="geo_logo" style="display: inline; position: relative; padding-left: 10px;"><img src="{% static 'img/geoloc.png'%}"></div>
-                        <div class="geoloc" style="position: relative; margin-left: 10px; display: inline; bottom: 10px; font-family: Arial Narrow; font-size: 18px;" >{{place.geolocation}} </div></div>
-                       
+                        <div class="block" style="top: 310px; position: absolute;">
+                            <div class="geo_logo" style="display: inline; position: relative; padding-left: 10px;"><img
+                                    src="{% static 'img/geoloc.png'%}"></div>
+                            <div class="geoloc"
+                                style="position: relative; margin-left: 10px; display: inline; bottom: 10px; font-family: Arial Narrow; font-size: 18px;">
+                                {{place.geolocation}} </div>
+                        </div>
+
                     </div>
                 </div>
                 {% endfor%}
-                
+
 
 
             </div>
@@ -111,6 +115,6 @@
         </div>
     </div>
 
-    
+
 
     <script src="{% static 'js/wist.js' %}"></script>

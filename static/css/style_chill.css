@@ -9,9 +9,11 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 .wrappers.hide {
     position: fixed;
 }
+
 .wrapper_top {
 
     position: relative;
@@ -39,7 +41,7 @@ body {
 .wrapper {
     position: relative;
     margin-top: 100px;
-    
+
 }
 
 .background {
@@ -53,7 +55,7 @@ body {
     z-index: -1;
     transition: 0.2s;
     max-width: 1820px;
-    
+
 }
 
 .list {
@@ -243,7 +245,7 @@ ul li {
 .box {
     margin-top: 243px;
     width: 350px;
-    height: 200px;
+    height: 108px;
     max-width: 350px;
     max-height: 200px;
     background: #ffffff;
@@ -265,7 +267,7 @@ ul li {
     position: absolute;
     top: -200px;
     right: 0.5px;
-   
+
 
 }
 
@@ -286,38 +288,45 @@ ul li {
     top: -19px;
 
 }
-.place {
+
+.money {
     position: relative;
     display: inline;
     font-family: Arial;
-    color: gray;
+
     margin-left: 10px;
-    font-size: 13px;
+
+    bottom: 17px;
 }
 
 .Date_box {
     position: relative;
     display: inline;
 }
+
 .logo_date {
     display: inline-block;
-    
+
     margin-top: 10px;
 }
+
 .Date {
     display: inline-block;
     font-family: Arial;
     font-size: 18px;
     margin-left: 10px;
 }
+
 .container3 {
     padding-left: 10px;
 }
+
 .logo_coin {
     display: inline;
-   position: relative;
+    position: relative;
 
 }
+
 .coin {
     position: relative;
     display: inline;
@@ -327,11 +336,13 @@ ul li {
     top: -19px;
 
 }
+
 .Coin_box {
     position: relative;
     margin-top: 10px;
     margin-left: -6px;
 }
+
 .type {
     font-family: Arial Narrow;
     font-size: 20px;
@@ -339,6 +350,7 @@ ul li {
     margin-top: 5px;
     margin-left: 10px;
 }
+
 #place_screen {
     position: fixed;
     top: 50%;
@@ -350,25 +362,31 @@ ul li {
     z-index: 1000;
     display: none;
     overflow-y: scroll;
-    
+
 }
+
 #place_screen.hide {
     opacity: 1;
     display: block;
-    
+
 }
+
 .panel {
     display: none;
     position: fixed;
     width: 30vw;
     height: 30vh;
     background-color: #000000;
-    
+
     z-index: 10000;
     top: 50%;
     left: 50%;
-    margin-top: -100px; /* Negative half of height. */
-margin-left: -250px; /* Negative half of width. */
+    margin-top: -100px;
+    /* Negative half of height. */
+    margin-left: -250px;
+    /* Negative half of width. */
 }
+
 .container {
-    min-width: 1284px;}
+    min-width: 1284px;
+}
