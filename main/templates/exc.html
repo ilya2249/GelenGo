@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GelenGo/excursions</title>
+    <link rel="stylesheet" href="{% static 'css/style_exc.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+
+<body>
+    <h2 id = "rangeValue"></h2>
+    <div id = "fillRangeValue"></div>
+    <input type="range"class="range" name="" value = "0" min="0" max = "100" onmousemove = "rangeSlider(this.value)" onChange = "rangeSlider(this.value)" >
+</body>
+</html>
+<script src="{% static 'js/exc.js' %}"></script>

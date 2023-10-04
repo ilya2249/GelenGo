@@ -18,3 +18,6 @@ def chill(request):
     price_type = Price_Type.objects.all()
     
     return render(request, 'chill.html', {'chills':chills, 'chill_type':chill_type,'price_type':price_type})
+def exc(request):
+
+    return render(request, 'exc.html', {})
