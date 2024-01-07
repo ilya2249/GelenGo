@@ -11,8 +11,9 @@
 </head>
 
 <body>
-
+    
     <div id="wrappers" class="wrappers">
+        <div class="img-logo-home"><a href="{% url 'index' %}"><img src="{% static 'imgs/home.png'%}" width = "80px" height = "80px"></a></div>
         <div class="container1">
             <div id="place_screen">
                 <div class="background_imgs">
@@ -39,33 +40,22 @@
             <div class="list">
                 <div class="text">Фильтрация</div>
                 <ul id="list">
-                    <li> <span class="text1"><img src="{% static 'img/caret.png'%}"id="caret_a">
+                    <li> <span class="text1"><img src="{% static 'imgs/caret.png'%}"id="caret_a">
                             Тип впечатления</span>
                         <div class="line_list"></div>
                         <nav1 data-category="type">
                             <ul id="list1">
-                                <li><span class="category-btn a" data-category="excursions"></span>Экскурсии</li>
+                                <li><span class="category-btn a" data-category="all"></span>Все</li>
                                 <li><span class="category-btn a" data-category="water"></span>На воде</li>
                                 <li><span class="category-btn a" data-category="attractions"></span>Аттракционы</li>
                                 <li><span class="category-btn a" data-category="degustation"></span>Дегустации</li>
                                 <li><span class="category-btn a" data-category="tur"></span>Туры</li>
                                 <li><span class="category-btn a" data-category="walks"></span>Прогулки и экотропы</li>
                                 <li><span class="category-btn a" data-category="guides"></span>Гиды и экскурсоводы</li>
+                                
 
                             </ul>
                         </nav1>
-                    </li>
-                    <li><span class="text2"><img src="{% static 'img/caret.png'%}"id="caret_b">Стоимость(на человека)</span>
-                        <div class="line_list"></div>
-                        <nav2 data-category="location">
-                            <ul id="list2">
-                                <li><span class="category-btn b" data-category="1000rub"></span>До 1 000р</li>
-                                <li><span class="category-btn b" data-category="5000rub"></span>До 5 000р</li>
-                                <li><span class="category-btn b" data-category="10000rub"></span>До 10 000р</li>
-                                <li><span class="category-btn b" data-category="20000rub"></span>До 20 000р</li>
-                            </ul>
-                        </nav2>
-
                     </li>
 
 
@@ -84,7 +74,7 @@
 
                         <div class="block" style="top: 251px; position: absolute;">
                             <div class="coin_logo" style="display: inline; position: relative;"><img
-                                    src="{% static 'img/coin.png'%}"></div> <div class="money">{{chill.price}} ₽</div>
+                                    src="{% static 'imgs/coin.png'%}"></div> <div class="money">{{chill.price}} ₽</div>
                             
                         </div></div>
 

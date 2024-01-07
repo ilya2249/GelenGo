@@ -1,8 +1,12 @@
 body {
-  background: url('video2.mp4');
-  background-size: cover;
+  background: url('video2.mp4') no-repeat;
 
+  background-attachment: fixed;
+  background-size: 100% 100%;
   overflow-x: hidden;
+  background-size: cover; 
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
 body.dark-theme {
@@ -289,7 +293,7 @@ nav ul li ul li:hover .list3 {
   text-align: center;
 
   margin: auto;
-  max-width: 75%;
+  max-width: 76%;
 }
 
 .list3.c {

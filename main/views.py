@@ -21,3 +21,9 @@ def chill(request):
 def exc(request):
 
     return render(request, 'exc.html', {})
+def facts_panel(request):
+
+    return render(request, 'facts_panel.html', {})
+def top_panel(request):
+
+    return render(request, 'top_panel.html', {})

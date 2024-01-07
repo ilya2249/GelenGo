@@ -1,10 +1,6 @@
 let list = document.getElementById('list2');
 let input = document.getElementsByClassName('search-input');
 list.classList.add('hide');
-// document.querySelector('#elastic').onclick = function(){
-//     elastic.classList.add('color');
-// }
-
 document.querySelector('#elastic').oninput = function () {
 
     list.classList.remove('hide');
@@ -15,15 +11,9 @@ document.querySelector('#elastic').oninput = function () {
         elasticItems.forEach(function (elem) {
             if (elem.innerText.search(val) == -1) {
                 elem.classList.add('hide');
-
-                // elem.innerHTML = elem.innerText;
-
             } else {
                 elem.classList.remove('hide');
-                // let str = elem.innerText;
-                // elem.innerHTML = markLetter(str, elem.innerText.search(val), val.length);
             }
-
         });
     } else {
         elasticItems.forEach(function (elem) {

@@ -19,7 +19,11 @@ body {
     position: relative;
     margin-top: 40px;
 }
-
+.img-logo-home{
+    position: fixed;
+    top: 90%;
+    color: orange;
+  }
 .text_top {
     position: relative;
     text-align: center;
@@ -273,7 +277,7 @@ ul li {
 
 .name {
     font-family: Arial Narrow;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bold;
     margin-left: 10px;
     text-align: left;

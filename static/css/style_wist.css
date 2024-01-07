@@ -3,7 +3,12 @@ body {
 
 
 }
-
+.img-logo-home{
+    position: fixed;
+    top: 90%;
+    color: orange;
+    z-index: -1000;
+}
 .wrappers {
     max-width: 1920px;
     margin-left: auto;
@@ -41,7 +46,9 @@ body {
     margin-top: 100px;
     
 }
-
+.text-name-exc{
+    text-align: center;
+}
 .background {
     left: 15px;
     position: absolute;
