@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/facts-panel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+
+<body
+    style="background-image: url({% static 'imgs/background-facts.jpg' %}); background-repeat: no-repeat;background-position: middle right;background-size: 100%;">
+
+    <div class="img-logo-home"><a href="{% url 'index' %}"><img src="{% static 'imgs/home.png'%}" width="80px"
+                height="80px"></a></div>
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="text-main-name">ИНТЕРЕСНОЕ О ГЕЛЕНДЖИКЕ</div>
+            <div class="line"></div>
+        </div>
+        <div class="container2">
+            <div class="boxesFacts">
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/white-lady.png' %}" width="300px"
+                                style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 1</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Многие авторитетные историки утвержда   ют название «Геленджик»
+                                    переводится как «Белая невесточка». Такая версия уходит своими корнями в далекое
+                                    прошлое, когда несколько столетий назад на месте нынешнего города был крупнейший в
+                                    регионе рынок рабов. Продавали преимущественно славян, которых турки считали белыми
+                                    людьми. Красивых девушек с белой кожей отправляли в турецкие гаремы. Само название
+                                    «Геленджик» дословно означает «Невесточка». </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="seafront"><img src="{% static 'imgs/seafront.jpg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 2</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Геленджик, славится наиболее длинной набережной в мире.
+                                    Общая ее протяженность составляет 14 км, из которых для пеших
+                                    романтичных прогулок туристам и гостям города предоставлено чуть больше 8 км. И это
+                                    еще не предел, ведь городская администрация Геленджика планирует ее последующее
+                                    увеличение. Главный конкурент – набережная в Дубае, длина которой составляет 12 км.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/aquapark.jpeg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 3</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Аквапарк «Золотая бухта» в Геленджике — самый большой аквапарк в
+                                    России, его площадь превышает 15 гектаров. Комплекс открытого типа (работает только
+                                    в теплый сезон) находится в 5,5 км от центра города, у северного побережья
+                                    Геленджикской бухты. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/population.jpg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 4</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Население курорта Геленджик составляет 117 000 человек
+                                    (Геленджик занимает 306 место по численности населения в России из 1117 городов), а
+                                    во время туристического сезона сюда приезжает до 1,7 млн. человек. В 10 раз больше.
+                                    В 2017 году (когда закрыли Турцию и Египет) в Геленджике отдохнуло рекордное
+                                    количество туристов — 4 млн 384 тыс. человек. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/buhta.jpeg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 5</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Самая глубокая точка в бухте 10 метров.Бухта Геленджика почти
+                                    правильной овальной формы, на земном шаре всего девять таких бухт.Расстояние между
+                                    Толстым и Тонким мысами составляет 1852 метра, ровно 1 морская миля. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/gel-title.jpg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 6</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">На горе Маркхот выложена надпись Геленджик, которая попала в
+                                    число самых больших надписей в мире. Эту надпись видно из любой точки города и даже
+                                    из космоса - её общая длина 100 метров. Каждую осень и весну её подкрашивают и
+                                    обновляют. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/cat.jpg' %}" width="300px" height="188px"
+                                style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 7</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">В России десять композиций скульптур «Кот Ученый», но
+                                    геленджикский кот самый известный, он установлен в 2008 году. Гости города-курорта
+                                    оставляют монеты на удачу. Здесь всегда многолюдно. Каждый гость города норовит
+                                    сфотографироваться с Котом учёным. Даже Дмитрий Медведев не удержался,
+                                    сфотографировался со скульптурой. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/aviashow.jpg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 8</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Раз в два года в Геленджике проходит международный
+                                    гидроавиасалон. Для профессионалов отрасли это площадка, где презентуются последние
+                                    научные разработки в указанной области, заключаются деловые соглашения,
+                                    подписываются многомиллионные контракты. Также это место встречи представителей
+                                    науки и власти с потенциальными инвесторами. Ежегодно его участниками становятся
+                                    сотни делегатов из России, ближнего и дальнего зарубежья. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/dolmeni.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">ФАКТ 9</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Рядом с Геленджиком много дольменов — древних каменных гробниц.
+                                    Ближе всего к городу расположен макет дольмена для туристов, который выглядит как
+                                    настоящий. Если решите посмотреть на реальные гробницы, возьмите экскурсию. Там подробно расскажут историю этих сооружений. Планировать заранее необязательно, экскурсии здесь предлагают на каждом шагу примерно за те же деньги, что и в интернете. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="boxes">
+                <div class="box-previous">
+                    <div class="box-previous-text">Назад</div>
+                </div>
+                <div class="box-next" id="next">
+                    <div class="box-next-text">Далее</div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+</body>
+
+</html>
+<script src="{% static 'js/facts.js' %}"></script>
