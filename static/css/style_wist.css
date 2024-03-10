@@ -379,3 +379,39 @@ margin-left: -250px; /* Negative half of width. */
 }
 .container {
     min-width: 1284px;}
+.block__icons {
+    position: absolute;
+    top: 362px;
+}
+.block__cost {
+    position: absolute;
+    top: 260px;
+   
+}
+.icon_mini {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+
+}
+.coin_logo{
+    position: relative;
+    display: inline;
+    margin-left: 3px;
+}
+.type_cost {
+    font-family: Arial Narrow;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    bottom: 15px;
+ 
+}
+.size {
+    position: relative;
+    margin-top: 3px;
+    font-family: Arial;
+    color: gray;
+    margin-left: 10px;
+    font-size: 13px;
+}

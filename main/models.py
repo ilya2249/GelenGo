@@ -29,7 +29,7 @@ class Hotel(models.Model):
     def __str__(self):
         return self.name 
              
-# Create your models here.
+
 class Place(models.Model):
     name = models.CharField('Название', max_length=255)
     text = models.TextField('Описание')
@@ -69,7 +69,69 @@ class Chill(models.Model):
     
     def __str__(self):
         return self.name 
+class Date_type(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name 
+class Geo_type(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name 
+class Event_type(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name 
+class Event(models.Model):
+    name = models.CharField('Название', max_length=255)
+    text = models.TextField('Описание')
+    img = models.ImageField('Карточки',upload_to="cards",blank=True)
+    event_type = models.ForeignKey(Event_type, null=True, blank=True, on_delete=models.CASCADE)
+    date_type = models.ForeignKey(Date_type, null=True, blank=True, on_delete=models.CASCADE)
+    Geo = models.ForeignKey(Geo_type, null=True, blank=True, on_delete=models.CASCADE)
+    dateEvent= models.CharField('Дата',default=0, max_length = 255)
+    typeE = models.CharField('Название', max_length=255,default=0)
+    
+    def __str__(self):
+        return self.name 
 
+class MyModel(models.Model):
+    unique_field = models.CharField(max_length=100, unique=True)
 class Exc(models.Model):
+    def __str__(self):
+        return self.name 
+class BeachGeo(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name 
+class BeachType(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name
+class BeachCost(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name  
+class Beach(models.Model):
+    name = models.CharField('Название', max_length=255)
+    text = models.TextField('Описание')
+    img = models.ImageField('Карточки',upload_to="cards",blank=True)
+    isAllowedIMG = models.ImageField('Купание запрещено',upload_to="cards",blank=True)
+    lenght = models.CharField('Протяженность', max_length=255,default=0)
+    width = models.CharField('Ширина', max_length=255,default=0)
+    geolocation = models.CharField('Геолокация', max_length=255,default=0)
+    beach_geo= models.ForeignKey(BeachType, null=True, blank=True, on_delete=models.CASCADE)
+    beach_type = models.ForeignKey(BeachGeo, null=True, blank=True, on_delete=models.CASCADE)
+    beach_type_cost = models.ForeignKey(BeachCost, null=True, blank=True, on_delete=models.CASCADE)
+    sunloungersIMG = models.ImageField('Шезлонги',upload_to="cards",blank=True)
+    coctelIMG = models.ImageField('Коктель',upload_to="cards",blank=True)
+    showerIMG = models.ImageField('Душ',upload_to="cards",blank=True)
+    sportIMG =  models.ImageField('Спорт',upload_to="cards",blank=True)
+    gymIMG = models.ImageField('Gym',upload_to="cards",blank=True)
     def __str__(self):
         return self.name 

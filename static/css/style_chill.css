@@ -23,6 +23,7 @@ body {
     position: fixed;
     top: 90%;
     color: orange;
+    z-index: -1000;
   }
 .text_top {
     position: relative;
@@ -47,7 +48,18 @@ body {
     margin-top: 100px;
 
 }
-
+.backgroundEvent {
+    left: 15px;
+    position: absolute;
+    border: 1px solid orange;
+    width: 1820px;
+    height: 300px;
+    background: #ffcd38;
+    border-radius: 40px;
+    z-index: -1;
+    transition: 0.2s;
+    max-width: 1820px;
+}
 .background {
     left: 15px;
     position: absolute;
@@ -112,7 +124,13 @@ ul li {
     transform: rotate(180deg);
     transition: 0.5s;
 }
-
+#caret_d {
+    width: 6%;
+    max-width: 6%;
+    margin-right: 10px;
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
 .list {
     transform: scale(1.15);
 }
@@ -144,7 +162,9 @@ ul li {
 #list3.hide {
     display: none;
 }
-
+#list4.hide {
+    display: none;
+}
 #back.hide {
     transition: 0.3s;
     height: 700px;
@@ -165,7 +185,10 @@ ul li {
     transform: rotate(0deg);
     transition: 0.5s;
 }
-
+#caret_d.hide {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
 #circle {
     display: inline-block;
     width: 10px;
@@ -245,11 +268,16 @@ ul li {
     top: -7px;
 
 }
-
+.date {
+    position: absolute;
+    top: 350px;
+    padding-left: 10px;
+    font-family: Suisse,Helvetica,Arial,sans-serif;
+}
 .box {
     margin-top: 243px;
     width: 350px;
-    height: 108px;
+    height: 408px;
     max-width: 350px;
     max-height: 200px;
     background: #ffffff;
@@ -259,6 +287,8 @@ ul li {
     transition: 0.5s;
     margin-left: 100px;
     display: inline-block;
+    font-family: Suisse,Helvetica,Arial,sans-serif;
+    font-size: 20px;
 
 }
 
@@ -348,7 +378,7 @@ ul li {
 }
 
 .type {
-    font-family: Arial Narrow;
+  
     font-size: 20px;
     position: relative;
     margin-top: 5px;

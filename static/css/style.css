@@ -286,12 +286,13 @@ nav ul li ul li:hover .list3 {
 }
 
 .main__text {
+  padding-top: 10px;
   position: relative;
   font-size: 90px;
   font-family: Bahnschrift Condensed;
   color: white;
   text-align: center;
-
+  border-radius: 20px;
   margin: auto;
   max-width: 76%;
 }
@@ -789,6 +790,7 @@ a {
   position: relative;
   margin-left: 22px;
   display: inline;
+
 }
 
 .geoloc {
@@ -796,6 +798,8 @@ a {
   position: relative;
   margin-left: 13px;
   bottom: 13px;
+
+
 }
 
 .container3 {

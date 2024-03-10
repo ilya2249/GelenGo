@@ -18,7 +18,7 @@
         <div class="img-logo-home"><a href="{% url 'index' %}"><img src="{% static 'imgs/home.png'%}" width = "80px" height = "80px"></a></div>
         <div class="wrapper_top">
           
-            <div class="text_top">МЕСТА РАЗМЕЩЕНИЯ</div>
+            <div class="text_top">Пляжи Геленджика</div>
             <div class="line"></div>
         </div>
         <div class="wrapper">
@@ -27,15 +27,15 @@
                 <div class="text">Фильтрация</div>
                 <ul id="list">
                     <li> <span class="text1"><img src="{% static 'imgs/caret.png'%}" id="caret_a">
-                            Тип размещения</span>
+                            Вид пляжа</span>
                         <div class="line_list"></div>
                         <nav1 data-category="type">
                             <ul id="list1">
                                 <li><span class="category-btn a" data-category="all"></span>Все</li>
-                                <li><span class="category-btn a" data-category="hotels"></span>Отели/Гостевые дома</li>
-                                <li><span class="category-btn a" data-category="apartments"></span>Апартаменты/квартиры
+                                <li><span class="category-btn a" data-category="sand"></span>Песок</li>
+                                <li><span class="category-btn a" data-category="pebbles"></span>Галька
                                 </li>
-                                <li><span class="category-btn a" data-category="sanatoriums"></span>Санатории</li>
+                                <li><span class="category-btn a" data-category="other"></span>Другое</li>
                                 
                             </ul>
                         </nav1>
@@ -51,17 +51,14 @@
                         </nav2>
 
                     </li>
-                    <li><span class="text3"><img src="{% static 'imgs/caret.png'%}" id="caret_c">Категория объекта</span>
+                    <li><span class="text3"><img src="{% static 'imgs/caret.png'%}" id="caret_c">Стоимость</span>
                         <div class="line_list"></div>
                         <nav3 data-category="category">
                             <ul id="list3">
                                 <li><span class="category-btn c" data-category="all"></span>Все</li>
-                                <li><span class="category-btn c" data-category="1"></span>Одна звезда</li>
-                                <li><span class="category-btn c" data-category="2"></span>Две звезды</li>
-                                <li><span class="category-btn c" data-category="3"></span>Три звезды</li>
-                                <li><span class="category-btn c" data-category="4"></span>Четыре звезды</li>
-                                <li><span class="category-btn c" data-category="5"></span>Пять звезд</li>
-                                <li><span class="category-btn c" data-category="0"></span>Не указано</li>
+                                <li><span class="category-btn c" data-category="free"></span>Бесплатный</li>
+                                <li><span class="category-btn c" data-category="paid"></span>Платный</li>
+                                
                             </ul>
                         </nav3>
                     </li>
@@ -70,22 +67,32 @@
             </div>
             <div class="container">
 
-                {% for place in places %}
+                {% for beach in beaches %}
                 <div id="p1" class="panel"></div>
-                <div id="b1" class="box {{place.geo.code}} {{place.hotel.code}} {{place.star.code}}">
-                    <div class="img_place"><img src="{{ place.img }}" width="351" height="200px"
+                <div id="b1" class="box {{beach.beach_geo.code}} {{beach.beach_type.code}} {{beach.beach_type_cost.code}}">
+                    <div class="img_place"><img src="{{ beach.img.url }}" width="351" height="200px"
                             style="border-radius: 15px 15px 0px 0px;">
-                        <div class="name">{{place.name}}</div>
-                        <div class="place">{{place.distance}} км. от центра</div>
-                        <div class="type">{{place.star.name}}</div>
+                        <div class="name">{{beach.name}}</div>
+                        <div class="size">Ширина: {{beach.width}}</div>
+                        <div class="size">Протяженность: {{beach.lenght}}</div>
+                        <div class="block__cost">
+                        <div class="coin_logo"><img
+                            src="{% static 'imgs/coin.png'%}"  width="40px" height="46px"></div>
+                        <div class="type_cost">{{beach.beach_type_cost.name}}</div></div>
                         <div class="block" style="top: 310px; position: absolute;">
                             <div class="geo_logo" style="display: inline; position: relative; padding-left: 10px;"><img
                                     src="{% static 'imgs/geoloc.png'%}"></div>
                             <div class="geoloc"
                                 style="position: relative; width: 300px; bottom: 10px;margin-left: 10px;vertical-align: middle;display: inline-block; font-family: Arial Narrow; font-size: 18px;">
-                                {{place.geolocation}} </div>
+                                {{beach.geolocation}} </div>
                         </div>
-
+                        <div class="block__icons">
+                        <div class="icon_mini">{%if beach.sunloungersIMG%}<img src="{{ beach.sunloungersIMG.url }}" width="30px" height="30px">{%endif%}</div>
+                        <div class="icon_mini">{%if beach.coctelIMG%}<img src="{{ beach.coctelIMG.url }}" width="30px" height="30px">{%endif%}</div>
+                        <div class="icon_mini">{%if beach.showerIMG%}<img src="{{ beach.showerIMG.url }}" width="30px" height="30px">{%endif%}</div>
+                        <div class="icon_mini">{%if beach.sportIMG%}<img src="{{ beach.sportIMG.url }}" width="30px" height="30px">{%endif%}</div>
+                        <div class="icon_mini">{%if beach.gymIMG%}<img src="{{ beach.gymIMG.url }}" width="30px" height="30px">{%endif%}</div>
+                        </div>
                     </div>
                 </div>
                 {% endfor%}

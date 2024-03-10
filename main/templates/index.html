@@ -31,41 +31,21 @@
                     <div class="gelen_logo" id = 'gl'><img src="{% static 'imgs/gelengo.png'%}"></div>
                     <nav>
                         <ul>
-                            <li><a href="">СОБЫТИЯ</a></li>
+                            <li><a href="{% url 'events' %}">СОБЫТИЯ</a></li>
                             <li><a href="{% url 'wist' %}">ГДЕ ОСТАНОВИТЬСЯ</a></li>
                             <li> <a href="">КУДА ПОЙТИ</a>
                                 <ul>
-                                    <div class="marker a">▸</div>
-                                    <div class="marker b">▸</div>
-                                    
-                                    <li><a href="">Пляжи</a></li>
+                                  
+                                    <li><a href="{% url 'beaches' %}">Пляжи</a></li>
                                     <li>
-                                        <div id="m"><a href="">Достопримечательности</a></div>
-                                        <ul class="list3 a">
-                                            <li><a href="">anorum</a></li>
-                                            <li><a href="">anorum</a></li>
-                                            <li><a href="">anorum</a></li>
-                                            <li><a href="">anorum</a></li>
-                                        </ul>
+                                        <div id=''><a href="">Достопримечательности</a></div>
                                     </li>
                                     <li>
                                         <div id="m"><a href="{% url 'chill' %}">Развлечения</a></div>
-                                        <ul class="list3">
-                                            <li><a href="">Аквапарки</a></li>
-                                            <li><a href="">Зоопарки</a></li>
-                                            <li><a href="">Кинотеатры</a></li>
-                                            <li><a href="">Парки аттракционов</a></li>
-                                            <li><a href="">Развлекательные комплексы</a></li>
-                                            <li><a href="">Спортивные комплексы и стадионы</a></li>
-                                        </ul>
+                                     
                                     </li>
                                     <li>
-                                        <div id="m"><a href="">Культурная жизнь</a></div>
-                                        
-                                    </li>
-                                   
-                                    <li>
-                                        <div id="m"><a href="">Отдых на природе</a></div>
+                                        <div id="m"><a href="{% url 'events' %}">Культурная жизнь</a></div>
                                         
                                     </li>
                                     
@@ -118,7 +98,7 @@
 
             <div class="cards">
                 <ul>
-                    <li><a href="">
+                    <li><a href="https://www.youtube.com/watch?v=HUyg4aDjrcI">
                             <div class="img a"><img src="{% static 'imgs/card1.png'%}">
                                 <div id="t" class="text1">ВИДЕОГИД «ГОРОД, ГДЕ<br> СБЫВАЮТСЯ МЕЧТЫ»</div>
                                 <div id="l" class="logo1"><img src="{% static 'imgs/logo1.png'%}"></div>
