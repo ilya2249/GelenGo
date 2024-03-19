@@ -3,7 +3,17 @@ body {
 
 
 }
+#generateBtn{
+  margin-left:1310px ;
+  margin-top: 50px;
+  position: relative;
+  background-color: rgb(255,192,0);
+  width: 220px;
+  height: 70px;
+  border-radius: 10px;
+  transition: 0.3s;
 
+}
 .containers {
   position: relative;
   text-align: center;
@@ -14,10 +24,16 @@ body {
   color: orange;
  
 }
+.text.c{
+  margin-right: 20px;
+}
+.text.d{
+  margin-right:25px ;
+}
 .img-logo-home{
   position: fixed;
   top: 90%;
-  color: orange;
+  color: rgb(255,206,56);
 }
 .container {
   margin-top: 20px;
@@ -78,6 +94,17 @@ input {
 }
 .text.c {
   font-size: 18px;
+}
+.text_btn{
+  text-align: center;
+  font-size: 24px;
+  font-family: Bahnschrift Condensed;
+  word-spacing: 3px;
+ 
+}
+#generateBtn:hover {
+  transition: 0.3s;
+  scale: 1.1;
 }
 .range {
 
@@ -146,12 +173,17 @@ input {
   box-shadow: -407px 0 0 400px #FFB52F;
 
 }
-
+.text.a{
+  margin-left:20px ;
+}
+.text.b{
+  margin-left:20px ;
+}
 .text-name-exc {
   text-align: center;
   font-size: 66px;
   font-family: Bahnschrift Condensed;
-  color: orange;
+  color: rgb(255,192,0);
   margin-top: 20px;
 }
 
@@ -178,8 +210,6 @@ input {
   color: black;
   top: 10px;
 }
-
-.container {}
 
 .img-vector3 {
   display: inline;

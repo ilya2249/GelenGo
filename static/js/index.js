@@ -47,8 +47,7 @@ let elements = document.querySelectorAll('.second_page');
 for (let elm of elements) {
     observer.observe(elm);
 }
-const sun = document.getElementById("sun");
-const moon = document.getElementById("moon");
+const changer = document.getElementById("toggle_checkbox");
 let videoD = document.getElementById('day');
 let videoN = document.getElementById('night');
 let search = document.getElementById('elastic');
@@ -61,50 +60,26 @@ let colorTextHover = document.querySelectorAll('nav > ul > li');
 let border = document.querySelectorAll('.container-not-image');
 let list3 = document.querySelectorAll('nav > ul > li > ul > li > .list3');
 let list4 = document.querySelectorAll('nav > ul > li > ul');
-sun.addEventListener("click", function () {
-    videoD.classList.remove('hide');
-    document.body.classList.remove('dark-theme');
-    videoN.classList.remove('hide');
-    search.classList.remove('hide');
-    mt.classList.remove('hide');
-    gl.classList.remove('hide');
-    document.body.classList.remove('dark-back-color');
-    c2.classList.remove('hide');
-    cn.classList.remove('hide');
+changer.addEventListener("click", function () {
+    videoD.classList.toggle('hide');
+    document.body.classList.toggle('dark-theme');
+    videoN.classList.toggle('hide');
+    search.classList.toggle('hide');
+    mt.classList.toggle('hide');
+    gl.classList.toggle('hide');
+    document.body.classList.toggle('dark-back-color');
+    c2.classList.toggle('hide');
+    cn.classList.toggle('hide');
     border.forEach(function (elem) {
-        elem.classList.remove('hide');
+        elem.classList.toggle('hide');
     });
     line.forEach(function (elem) {
-        elem.classList.remove('hide');
+        elem.classList.toggle('hide');
     });
     list3.forEach(function(elem) {
-        elem.classList.remove('hide');
+        elem.classList.toggle('hide');
     })
     list4.forEach(function(elem) {
-        elem.classList.remove('hide');
+        elem.classList.toggle('hide');
     })
 });
-moon.addEventListener("click", function () {
-            videoD.classList.remove('hide');
-            document.body.classList.add('dark-theme');
-            videoN.classList.add('hide');
-            search.classList.add('hide');
-            mt.classList.add('hide');
-            gl.classList.add('hide');
-            document.body.classList.add('dark-back-color');
-            c2.classList.add('hide');
-            cn.classList.add('hide');
-            border.forEach(function (elem) {
-                elem.classList.add('hide');
-            });
-            line.forEach(function (elem) {
-                elem.classList.add('hide');
-            });
-     
-            list3.forEach(function(elem) {
-                elem.classList.add('hide');
-            })
-            list4.forEach(function(elem) {
-                elem.classList.add('hide');
-            })
-        })

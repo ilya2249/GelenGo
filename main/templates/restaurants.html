@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GelenGo/hotel</title>
+    <link rel="stylesheet" href="{% static 'css/style_wist.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    
+
+</head>
+
+<body>
+   
+    <div id="wrappers" class="wrappers">
+        <div class="img-logo-home"><a href="{% url 'index' %}"><img src="{% static 'imgs/home.png'%}" width = "80px" height = "80px"></a></div>
+        <div class="wrapper_top">
+          
+            <div class="text_top">МЕСТА РАЗМЕЩЕНИЯ</div>
+            <div class="line"></div>
+        </div>
+        <div class="wrapper">
+            <div id="back" class="background"></div>
+            <div class="list">
+                <div class="text">Фильтрация</div>
+                <ul id="list">
+                    <li> <span class="text1"><img src="{% static 'imgs/caret.png'%}" id="caret_a">Тип кухни</span>
+                        <div class="line_list"></div>
+                        <nav1 data-category="type">
+                            <ul id="list1">
+                                <li><span class="category-btn a" data-category="all"></span>Все</li>
+                                <li><span class="category-btn a" data-category="Французская кухня"></span>Французская кухня</li>
+                                <li><span class="category-btn a" data-category="Итальянская кухня"></span>Итальянская кухня</li>
+                                <li><span class="category-btn a" data-category="Итальянская кухня"></span>Паназиатская кухня</li>
+                                <li><span class="category-btn a" data-category="Рыбные рестораны"></span>Рыбные рестораны</li>
+                                <li><span class="category-btn a" data-category="Здоровое питание"></span>Здоровое питание</li>
+                                <li><span class="category-btn a" data-category="ФастФуд"></span>Фастфуд</li>
+                                <li><span class="category-btn a" data-category="Бургеры"></span>Бургеры</li>
+                                <li><span class="category-btn a" data-category="Стейки"></span>Стейки </li>
+                                
+                            </ul>
+                        </nav1>
+                    </li>
+                    <li><span class="text2"><img src="{% static 'imgs/caret.png'%}" id="caret_b">Тип ресторана</span>
+                        <div class="line_list"></div>
+                        <nav2 data-category="location">
+                            <ul id="list2">
+                                <li><span class="category-btn b" data-category="all"></span>Все</li>
+                                <li><span class="category-btn b" data-category="Кафе"></span>Кафе</li>
+                                <li><span class="category-btn b" data-category="Бары"></span>Бары</li>
+                                <li><span class="category-btn b" data-category="Гастропабы"></span>Гастропабы</li>
+                                <li><span class="category-btn b" data-category="Винотеки"></span>Винотеки</li>
+                            </ul>
+                        </nav2>
+
+                    </li>
+                    <li><span class="text3"><img src="{% static 'imgs/caret.png'%}" id="caret_c">Категория объекта</span>
+                        <div class="line_list"></div>
+                        <nav3 data-category="category">
+                            <ul id="list3">
+                                <li><span class="category-btn c" data-category="all"></span>Все</li>
+                                <li><span class="category-btn c" data-category="1"></span>Одна звезда</li>
+                                <li><span class="category-btn c" data-category="2"></span>Две звезды</li>
+                                <li><span class="category-btn c" data-category="3"></span>Три звезды</li>
+                                <li><span class="category-btn c" data-category="4"></span>Четыре звезды</li>
+                                <li><span class="category-btn c" data-category="5"></span>Пять звезд</li>
+                                <li><span class="category-btn c" data-category="0"></span>Не указано</li>
+                            </ul>
+                        </nav3>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="container">
+
+                {% for place in places %}
+                <div id="p1" class="panel"></div>
+                <div id="b1" class="box {{place.geo.code}} {{place.hotel.code}} {{place.star.code}}">
+                    <div class="img_place"><img src="{{ place.img }}" width="351" height="200px"
+                            style="border-radius: 15px 15px 0px 0px;">
+                        <div class="name">{{place.name}}</div>
+                        <div class="place">{{place.distance}} км. от центра</div>
+                        <div class="type">{{place.star.name}}</div>
+                        <div class="block" style="top: 310px; position: absolute;">
+                            <div class="geo_logo" style="display: inline; position: relative; padding-left: 10px;"><img
+                                    src="{% static 'imgs/geoloc.png'%}"></div>
+                            <div class="geoloc"
+                                style="position: relative; width: 300px; bottom: 10px;margin-left: 10px;vertical-align: middle;display: inline-block; font-family: Arial Narrow; font-size: 18px;">
+                                {{place.geolocation}} </div>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor%}
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'js/restaurants.js' %}"></script>

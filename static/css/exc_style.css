@@ -1,0 +1,183 @@
+.wrapper{
+    position: relative;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.banner__images{
+    position: relative;
+    display: flex;
+}
+#time::before{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhl…sbD0iIzQ0NCIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+");
+}
+.pic.a{
+    margin-left: 0px;
+}
+
+.pic{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.title {
+    position: absolute;
+    background-color: white;
+    top: 200px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    opacity: 0.8;
+    font-family: Bahnschrift Condensed;
+    font-size: 30px;
+}
+.text.at1 {
+    font-family:Bahnschrift Light;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 30px;
+    height: 350px;;
+    width: 800px;
+    position: relative; 
+    margin-top: 50px;
+    display: block;
+    font-size: 20px;
+    background-color: #fdeabe;
+    text-align: justify ;
+    word-spacing: 4px;
+    line-height: 25px;
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: #DD930D;
+    
+}
+
+.text{
+    font-family:Bahnschrift Light;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 30px;
+    height: auto;;
+    width: 800px;
+    position: relative; 
+    margin-top: 50px;
+    display: block;
+    font-size: 20px;
+    background-color: #fdeabe;
+    text-align: justify ;
+    word-spacing: 4px;
+    line-height: 25px;
+    margin-left: 100px;
+}
+table {
+    border-collapse: collapse;
+    width: 860px;
+    height: 150px;
+    margin-left: 100px;
+}
+.table {
+    margin-left: 100px;
+    margin-top: 50px;
+   height: 150px;
+}
+th, td {
+    font-family:Bahnschrift Light;
+    border: 1px solid black !important; /* Явное указание стиля обводки */
+    padding: 8px;
+    text-align: center;
+  
+      vertical-align: middle;
+
+}
+th {
+    background-color: #f2f2f2;
+}
+.text_table{
+    font-family: Bahnschrift Condensed;
+    vertical-align: middle;
+padding-top: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Чередование цветов строк */
+}
+tr:hover {
+    background-color: #f2f2f2; /* Изменение цвета строки при наведении */
+}
+.text_table_min{
+    font-family: Bahnschrift Light;
+    font-style: Condensed;
+    font-size: 16px;
+  
+    padding-top: 10px;
+}
+.t {
+    position: relative;
+    font-family: Bahnschrift Condensed;
+    font-size: 30px;
+    
+}
+.a {
+    color: #DD930D;
+}
+.parametrs {
+    position: absolute;
+    top: 500px;
+    left: 1100px;
+}
+.img{
+    position: relative;
+    margin-top: 7px;
+    display: inline;
+}
+.length{
+    display: inline;
+    margin-left: 5px;
+}
+.width{
+    display: inline;
+    margin-left: 5px;
+}
+ul li{
+    font-family: Bahnschrift Condensed;
+    font-style: italic;
+    font-size: 20px;
+    left: 30px;
+}
+ul{
+    list-style-type: square;
+    list-style: square;
+}
+.list{
+    position: absolute;
+    left: 55px;
+    margin-top: 10px;
+}
+.title_parametrs.t.a.s{
+    position: relative;
+    margin-top: 10px;
+}
+::-webkit-scrollbar {
+    width: 0;
+  }
+  .text.at2{
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-top:10px;
+    width: 700px;
+    background-color: white;
+  }
+  .text.at2.k{
+    line-height: normal;
+    word-spacing: normal;
+    font-style: normal;
+  }
+  #listSafari {
+    line-height: normal;
+    word-spacing: normal;
+    font-style: normal;
+  }

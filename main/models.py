@@ -135,3 +135,22 @@ class Beach(models.Model):
     gymIMG = models.ImageField('Gym',upload_to="cards",blank=True)
     def __str__(self):
         return self.name 
+class TypesRests(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name  
+class TypeKitchen(models.Model):
+    name = models.CharField('Название', max_length = 255)
+    code = models.CharField('Код', max_length=255)
+    def __str__(self):
+        return self.name  
+class Restaurant(models.Model):
+    name = models.CharField('Название', max_length=255)
+    img = models.ImageField('Карточки',upload_to="cards",blank=True)
+    type_of_rest = models.ForeignKey(TypesRests, null=True, blank=True, on_delete=models.CASCADE)
+    geolocation = models.CharField('Геолокация', max_length=255,default=0)
+    opentill = models.CharField('Открыто до', max_length=255,default=0)
+    type_of_kitchen =  models.ForeignKey(TypeKitchen, null=True, blank=True, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name 

@@ -15,7 +15,7 @@
     </video>
 
     <video autoplay loop muted class="day_video" id="day">
-        <source src="{% static 'videos/video.mp4'%}" type="video/mp4">
+        <source src="{% static 'videos/video2.mp4'%}" type="video/mp4">
         </source>
     </video>
 
@@ -33,12 +33,12 @@
                         <ul>
                             <li><a href="{% url 'events' %}">СОБЫТИЯ</a></li>
                             <li><a href="{% url 'wist' %}">ГДЕ ОСТАНОВИТЬСЯ</a></li>
-                            <li> <a href="">КУДА ПОЙТИ</a>
+                            <li id = 'caret__text'> <a href="">КУДА ПОЙТИ <img src="{% static 'imgs/caret_white.png'%}" id="caret_a"></a>
                                 <ul>
                                   
                                     <li><a href="{% url 'beaches' %}">Пляжи</a></li>
                                     <li>
-                                        <div id=''><a href="">Достопримечательности</a></div>
+                                        <div id=''><a href="{% url 'top_panel' %}">Достопримечательности</a></div>
                                     </li>
                                     <li>
                                         <div id="m"><a href="{% url 'chill' %}">Развлечения</a></div>
@@ -56,19 +56,22 @@
                             <li><a href="{% url 'exc' %}">ЭКСКУРСИИ</a></li>
                             
                             <li> <div class="btn-toggle">
-                        <div class="back">
-                            <div class="logo_sun"><img id = "sun" src="{% static 'imgs/sun.png'%}" width="50" height="50px">
-                                <div class="logo_moon"><img id = "moon" src="{% static 'imgs/moon.png'%}" width="50" height="50px">
-                                </div>
-                            </div>
-                        </div></li>
+                                <input type="checkbox" id="toggle_checkbox">
+
+                                <label for="toggle_checkbox">
+                                  <div id="star">
+                                    <div class="star" id="star-1">★</div>
+                                    <div class="star" id="star-2">★</div>
+                                  </div>
+                                  <div id="moon"></div>
+                                </label></li>
                         </ul>
                         
                     </nav>
 
                    
             </header>
-            <div class="main_container">
+            <div class="main_container" style = "border-radius: 20px;">
             <div class="main__text" id='mt'>ИСПОЛНИ СВОЮ МЕЧТУ В GELENDZHIKE
             </div>
          
@@ -76,13 +79,26 @@
                     <input type="text" id="elastic" placeholder="Что вы ищете?" class="search-input">
 
                     <ul class="elastic" id="list2">
-                        <li><a href="https://yandex.ru/search/?clid=1882628&text=lorem&l10n=ru&lr=10990">lorem</a></li>
-                        <li><a href="https://yandex.ru/search/?clid=1882628&text=lorem&l10n=ru&lr=10990">anorum</a></li>
-                        <li>expectrum</li>
-                        <li>avakado</li>
-                        <li>bruklin</li>
-                        <li>яхты</li>
-                        <li>экскурсии</li>
+                        <li><a href="{% url 'top_panel' %}">достопримечательности</a></li>
+                        <li><a href="{% url 'top_panel' %}">лучшие места города</a></li>
+                        <li><a href="{% url 'top_panel' %}">топовые места</a></li>
+                        <li><a href="{% url 'chill' %}">развлечения</a></li>
+                        <li><a href="{% url 'exc' %}">экскурсии</a></li>
+                        <li><a href="{% url 'exc' %}">планирование отдыха</a></li>
+                        <li><a href="{% url 'exc' %}">отдых</a></li>
+                        <li><a href="{% url 'wist' %}">отели</a></li>
+                        <li><a href="{% url 'wist' %}">гостиницы</a></li>
+                        <li><a href="{% url 'wist' %}">апартаменты</a></li>
+                        <li><a href="{% url 'wist' %}">санатории</a></li>
+                        <li><a href="{% url 'wist' %}">размещение</a></li>
+                        <li><a href="{% url 'beaches' %}">пляжи</a></li>
+                        <li><a href="{% url 'events' %}">события</a></li>
+                        <li><a href="{% url 'events' %}">концерты</a></li>
+                        <li><a href="{% url 'events' %}">кино</a></li>
+                        <li><a href="{% url 'events' %}">спектакли</a></li>
+                        <li><a href="{% url 'facts_panel' %}">интересные факты</a></li>
+                        <li><a href="{% url 'facts_panel' %}">факты</a></li>
+                        <li><a href="{% url 'facts_panel' %}">о Геленджике</a></li>
                     </ul>
             </form>
 
