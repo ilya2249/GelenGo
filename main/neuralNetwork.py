@@ -10,6 +10,7 @@ def excursion_neural_network_func(value1,value2,value3,value4):
   value3 = int(value3)
   value4 = int(value4)
 
+
   
   x = np.array([value1, value2, value3, value4])
 
