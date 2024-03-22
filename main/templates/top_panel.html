@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/top_panel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+</head>
+
+<body
+    style="background-image: url({% static 'imgs/background-facts.jpg' %}); background-repeat: no-repeat;background-position: middle right;background-size: 100%;">
+
+    <div class="img-logo-home"><a href="{% url 'index' %}"><img src="{% static 'imgs/home.png'%}" width="80px"
+                height="80px"></a></div>
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="text-main-name">ЛУЧШИЕ МЕСТА ГОРОДА</div>
+            <div class="line"></div>
+        </div>
+        <div class="container2">
+            <div class="boxesFacts">
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/grozovie_vorota.jpeg' %}"  width="300px"
+                            height="188px"
+                                style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">10 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Сериал "Грозовые ворота", снятый в 2006 году, рассказывает о
+                                    сражении на 776-м холме в конце Второй чеченской войны. Но немногие знают, что
+                                    съемки проходили не в Чечне, а в декорациях, созданных недалеко от Геленджика. На
+                                    самом деле крепость "Грозовые ворота" была построена специально для киноленты, и
+                                    после завершения съемок её не разбирали. Туристический интерес сделал эту крепость
+                                    популярной достопримечательностью. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="seafront"><img src="{% static 'imgs/andrews_park.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">9 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">В 2017 году по случаю 80-летия образования Краснодарского края в Геленджике появилась новая зеленая зона. Андреевский парк занимает 1,5 га. На его территории есть места для отдыха с беседками и скамейками, тропа здоровья, небольшой пруд с декоративными карпами и детская площадка. В центральной части парка установлен памятник Андрею Первозванному, который был доставлен в город-курорт из Санкт-Петербурга.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/singinf_fountain.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">8 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">На пересечении Лермонтовского бульвара и улицы Садовая расположен Музыкальный фонтан. Он был установлен в 2012 году. Фонтан состоит из 4 чаш, каждая из которых выполнена из цельного гранита. Диаметр самой большой чаши — 12 м. Днем достопримечательность выглядит стандартно, а вот вечером кардинально преображается благодаря светомузыкальному оформлению.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/sobor.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">7 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Вознесенская церковь в Геленджике ведет свою историю с начала XX века. В то время на месте популярного курорта была лишь маленькая деревушка. Храм возвели в 1905-1909 годах по инициативе местных жителей. При советской власти церковь то закрывалась, то открывалась вновь. В 1980-х в стенах сооружения хотели разместить экспозицию краеведческого музея. Но эти планы не сбылись, т.к. уже в начале 1990-х Вознесенский храм вернули верующим. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/aquapark.jpeg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">6 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Это один из крупнейших аквапарков под открытым небом в нашей стране. На площади 154 тыс. м² сосредоточено 49 горок, 69 протяженных спусков, 8 бассейнов (в том числе и с морской водой), 10 отдельных водных аттракционов и детская площадка. Длина самого продолжительного спуска равна 137 м, высота самой большой горки — 25 м. Обычно аквапарк «Золотая бухта» работает с конца мая по середину сентября. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/rio.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">5 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">В декабре 2018 года на берег рядом с поселком Кабардинка, что всего в 17 км от Геленджика, выбросило сухогруз «Rio». В тот злополучный день судно, плававшее под флагом африканской Тоголезской Республики, попало в шторм. После продолжительной борьбы со стихией сухогруз сел на мель, не получив при этом существенных повреждений. Дальнейшая судьба «Rio» пока под вопросом. Бывшим владельцам корабль больше не нужен. А вот туристы хотят, чтобы сухогруз остался в Кабардинке навсегда.
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/krucha.jfif' %}" width="300px" height="188px"
+                                style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">4 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">От посторонних глаз пляж «Круча» скрыт Толстым мысом, поэтому отдыхающих на нем всегда немного. Местные жители и продвинутые путешественники любят это место не только за безлюдность, но и за живописные виды. Сверху на скалах расположена смотровая площадка и небольшой ресторан.
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/aviashow.jpg' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">3 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Раз в два года в Геленджике проходит международный
+                                    гидроавиасалон. Для профессионалов отрасли это площадка, где презентуются последние
+                                    научные разработки в указанной области, заключаются деловые соглашения,
+                                    подписываются многомиллионные контракты. Также это место встречи представителей
+                                    науки и власти с потенциальными инвесторами. Ежегодно его участниками становятся
+                                    сотни делегатов из России, ближнего и дальнего зарубежья. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/dolmeni.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">2 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">Рядом с Геленджиком много дольменов — древних каменных гробниц.
+                                    Ближе всего к городу расположен макет дольмена для туристов, который выглядит как
+                                    настоящий. Если решите посмотреть на реальные гробницы, возьмите экскурсию. Там
+                                    подробно расскажут историю этих сооружений. Планировать заранее необязательно,
+                                    экскурсии здесь предлагают на каждом шагу примерно за те же деньги, что и в
+                                    интернете. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="main-wrapper-facts">
+                        <div class="img" id="lady"><img src="{% static 'imgs/krest.jfif' %}" width="300px"
+                                height="188px" style="border-radius: 30px"></div>
+                        <div class="background-facts">
+                            <div class="facts-wrapper">
+                                <div class="name-facts">1 МЕСТО</div>
+                                <div class="name-facts-line"></div>
+                                <div class="text-facts">На вершине Маркотхского горного хребта рядом с развлекательным парком «Олимп» находится еще одна новая достопримечательность — поклонный крест Рио-де-Геленджик. Он был установлен в 2020 году с одобрения самого патриарха Кирилла. В основание креста заложена частица мощей преподобного Серафима Саровского. Высота металлической конструкции вместе с основанием — около 43 м, без основания — 34 м. </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="boxes">
+                <div class="box-previous">
+                    <div class="box-previous-text">Назад</div>
+                </div>
+                <div class="box-next" id="next">
+                    <div class="box-next-text">Далее</div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+</body>
+
+</html>
+<script src="{% static 'js/facts.js' %}"></script>

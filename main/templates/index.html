@@ -1,0 +1,299 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GelenGo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+ 
+    <video autoplay loop muted class="night_video" id="night">
+        <source src="{% static 'videos/video3.mp4'%}" type="video/mp4">
+        </source>
+    </video>
+
+    <video autoplay loop muted class="day_video" id="day">
+        <source src="{% static 'videos/video2.mp4'%}" type="video/mp4">
+        </source>
+    </video>
+
+
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="first_page">
+            <header>
+                <div class="wrapper_top">
+                    <div class="gelen_logo" id = 'gl'><img src="{% static 'imgs/gelengo.png'%}"></div>
+                    <nav>
+                        <ul>
+                            <li><a href="{% url 'events' %}">СОБЫТИЯ</a></li>
+                            <li><a href="{% url 'wist' %}">ГДЕ ОСТАНОВИТЬСЯ</a></li>
+                            <li id = 'caret__text'> <a href="">КУДА ПОЙТИ <img src="{% static 'imgs/caret_white.png'%}" id="caret_a"></a>
+                                <ul>
+                                  
+                                    <li><a href="{% url 'beaches' %}">Пляжи</a></li>
+                                    <li>
+                                        <div id=''><a href="{% url 'top_panel' %}">Достопримечательности</a></div>
+                                    </li>
+                                    <li>
+                                        <div id="m"><a href="{% url 'chill' %}">Развлечения</a></div>
+                                     
+                                    </li>
+                                    <li>
+                                        <div id="m"><a href="{% url 'events' %}">Культурная жизнь</a></div>
+                                        
+                                    </li>
+                                    
+
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'restaurants' %}">ГДЕ ПОЕСТЬ</a></li>
+                            <li><a href="{% url 'exc' %}">ЭКСКУРСИИ</a></li>
+                            
+                            <li> <div class="btn-toggle">
+                                <input type="checkbox" id="toggle_checkbox">
+
+                                <label for="toggle_checkbox">
+                                  <div id="star">
+                                    <div class="star" id="star-1">★</div>
+                                    <div class="star" id="star-2">★</div>
+                                  </div>
+                                  <div id="moon"></div>
+                                </label></li>
+                        </ul>
+                        
+                    </nav>
+
+                   
+            </header>
+            <div class="main_container" style = "border-radius: 20px;">
+            <div class="main__text" id='mt'>ИСПОЛНИ СВОЮ МЕЧТУ В GELENDZHIKE
+            </div>
+         
+                <form class="search">
+                    <input type="text" id="elastic" placeholder="Что вы ищете?" class="search-input">
+
+                    <ul class="elastic" id="list2">
+                        <li><a href="{% url 'top_panel' %}">достопримечательности</a></li>
+                        <li><a href="{% url 'top_panel' %}">лучшие места города</a></li>
+                        <li><a href="{% url 'top_panel' %}">топовые места</a></li>
+                        <li><a href="{% url 'chill' %}">развлечения</a></li>
+                        <li><a href="{% url 'exc' %}">экскурсии</a></li>
+                        <li><a href="{% url 'exc' %}">планирование отдыха</a></li>
+                        <li><a href="{% url 'exc' %}">отдых</a></li>
+                        <li><a href="{% url 'wist' %}">отели</a></li>
+                        <li><a href="{% url 'wist' %}">гостиницы</a></li>
+                        <li><a href="{% url 'wist' %}">апартаменты</a></li>
+                        <li><a href="{% url 'wist' %}">санатории</a></li>
+                        <li><a href="{% url 'wist' %}">размещение</a></li>
+                        <li><a href="{% url 'beaches' %}">пляжи</a></li>
+                        <li><a href="{% url 'events' %}">события</a></li>
+                        <li><a href="{% url 'events' %}">концерты</a></li>
+                        <li><a href="{% url 'events' %}">кино</a></li>
+                        <li><a href="{% url 'events' %}">спектакли</a></li>
+                        <li><a href="{% url 'facts_panel' %}">интересные факты</a></li>
+                        <li><a href="{% url 'facts_panel' %}">факты</a></li>
+                        <li><a href="{% url 'facts_panel' %}">о Геленджике</a></li>
+                    </ul>
+            </form>
+
+
+
+
+
+        </div></div>
+
+
+        <div class="second_page">
+
+
+
+            <div class="cards">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=HUyg4aDjrcI">
+                            <div class="img a"><img src="{% static 'imgs/card1.png'%}">
+                                <div id="t" class="text1">ВИДЕОГИД «ГОРОД, ГДЕ<br> СБЫВАЮТСЯ МЕЧТЫ»</div>
+                                <div id="l" class="logo1"><img src="{% static 'imgs/logo1.png'%}"></div>
+                            </div>
+                        </a></li>
+                    <li><a href="{% url 'facts_panel' %}">
+                            <div class="img b"><img src="{% static 'imgs/card2.png'%}">
+                                <div id="t" class="text2">ИНТЕРЕСНОЕ О <br>ГЕЛЕНДЖИКЕ</div>
+                                <div id="l" class="logo2"><img src="{% static 'imgs/logo2.png'%}"></div>
+                            </div>
+                        </a></li>
+                    <li><a href="">
+                            <div class="img c"><img src="{% static 'imgs/card3.png'%}">
+                                <div id="t" class="text3">ОЗДОРОВЛЕНИЕ <br>НА КУРОРТЕ</div>
+                                <div id="l" class="logo3"><img src="{% static 'imgs/logo3.png'%}"></div>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="cards2">
+                <ul>
+                    <li><a href="{% url 'chill' %}">
+                            <div class="img2 a"><img src="{% static 'imgs/card4.png'%}">
+                                <div id="t" class="text4">ОСНОВНЫЕ ВИДЫ ТУРИЗМА <br> В ГЕЛЕНДЖИКЕ</div>
+                                <div id="l" class="logo4"><img src="{% static 'imgs/logo4.png'%}"></div>
+
+                            </div>
+                        </a></li>
+                    <li><a href="{% url 'exc' %}">
+                            <div class="img2 b"><img src="{% static 'imgs/card5.png'%}">
+                                <div id="t" class="text5">ПОДБОР ОТДЫХА C ИИ</div>
+                                <div id="l" class="logo5"><img src="{% static 'imgs/logo5.png'%}"></div>
+                        </a></li>
+                    <li><a href="{% url 'top_panel' %}">
+                            <div class="img2 c"><img src="{% static 'imgs/card6.png'%}">
+                                <div id="t" class="text6">ТОПОВЫЕ МЕСТА <br> ГОРОДА</div>
+                                <div id="l" class="logo6"><img src="{% static 'imgs/logo6.png'%} "width="170" height="100px"></div>
+                        </a></li>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="third_page">
+            <div class="events">СОБЫТИЯ
+                <div class="line"></div> </div>
+            <div class="container2" id = "c2">
+               
+               
+                <div class="box1">
+                    <div class="event_img"><img src="{% static 'imgs/leps.png'%}" width="300" height="200px" style = 'border-radius: 19px 19px 0px 0px;'></div>
+                    <div class="container-not-image"id='cni'>
+                    <div class="name">ГРИГОРИЙ ЛЕПС</div>
+                    <div class="type">концерт</div>
+                    <div class="container3">
+
+                        <div class="Date_box">
+                            <div class="logo_date"><img src="{% static 'imgs/date.png'%}"></div>
+                            <div class="Date">Date</div>
+                        </div>
+                        <div class="Coin_box">
+                            <div class="logo_coin"><img src="{% static 'imgs/coin.png'%}"></div>
+                            <div class="coin">Coin</div>
+                        </div>
+                        <div class="Geoloc_box">
+                            <div class="geoloc_logo"><img src="{% static 'imgs/geoloc.png'%}"></div>
+                            <div class="geoloc">geoloc</div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+                </div>
+                <div class="box2">
+                    <div class="event_img"><img src="{% static 'imgs/mary.png'%}" width="300" height="200px" style = 'border-radius: 19px 19px 0px 0px;'></div>
+                    <div class="container-not-image"id='cni'>
+                    <div class="name">МАРИ КРАЙМБРЕРИ</div>
+                    <div class="type">концерт</div>
+                    <div class="container3">
+
+                        <div class="Date_box">
+                            <div class="logo_date"><img src="{% static 'imgs/date.png'%}"></div>
+                            <div class="Date">Date</div>
+                        </div>
+                        <div class="Coin_box">
+                            <div class="logo_coin"><img src="{% static 'imgs/coin.png'%}"></div>
+                            <div class="coin">Coin</div>
+                        </div>
+                        <div class="Geoloc_box">
+                            <div class="geoloc_logo"><img src="{% static 'imgs/geoloc.png'%}"></div>
+                            <div class="geoloc">geoloc</div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <div class="box3">
+                    <div class="event_img"><img src="{% static 'imgs/balet.png'%}" width="300" height="200px" style = 'border-radius: 19px 19px 0px 0px;'></div>
+                    <div class="container-not-image"id='cni'>
+                    <div class="name">БАЛЕТ «ЖИЗЕЛЬ»</div>
+                    <div class="type">театр</div>
+                    <div class="container3">
+
+                        <div class="Date_box">
+                            <div class="logo_date"><img src="{% static 'imgs/date.png'%}"></div>
+                            <div class="Date">Date</div>
+                        </div>
+                        <div class="Coin_box">
+                            <div class="logo_coin"><img src="{% static 'imgs/coin.png'%}"></div>
+                            <div class="coin">Coin</div>
+                        </div>
+                        <div class="Geoloc_box">
+                            <div class="geoloc_logo"><img src="{% static 'imgs/geoloc.png'%}"></div>
+                            <div class="geoloc">geoloc</div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="last_page">
+            <div id="news" class="news">НОВОСТИ
+                <div class="line"></div>
+            </div>
+            <div class="container_news" id="cn"id='cni'>
+                <div class="box4">
+                    <div class="event_img"><img src="{% static 'imgs/news1.png'%}" width="300" height="200px"></div>
+                    <div class="container-not-image">
+                    <div class="text_f">В Геленджике отдохнули более 1,6 миллиона человек</div>
+                    <div class="text_s">Такие данные приводит глава города Алексей Богодистов на своей странице в сети
+                        «ВКонтакте»: «Летний сезон в Геленджике сейчас в самом разгаре. Единовременно на курорте
+                        находятся более 92 тысячи отдыхающих.</div>
+                    <div class="container4">
+                        <div class="date_news">21.07.2023</div>
+                        <div class="type_news">Общество</div>
+                    </div></div>
+                </div>
+                <div class="box5"id='cni'>
+                    <div class="event_img"><img src="{% static 'imgs/news2.png'%}" width="300" height="200px"></div>
+                    <div class="container-not-image">
+                    <div class="text_f">Кинофестиваль «Маяк» под патронажем Романа Абрамовича пройдет в октябре в
+                        Геленджике</div>
+                    <div class="text_s">Пилотный кинофестиваль «Маяк» пройдет в Геленджике с 5 по 9 октября.
+                        Организаторы планируют, что он станет ежегодным</div>
+                    <div class="container4">
+                        <div class="date_news">06.07.2023</div>
+                        <div id="culture" class="type_news">Культура</div>
+                    </div></div>
+                </div>
+                <div class="box6"id='cni'
+                
+                >
+                    <div class="event_img"><img src="{% static 'imgs/news3.png'%}" width="300" height="200px"></div>
+                    <div class="container-not-image">
+                    <div class="text_f">Черное море в районе Геленджика прогрелось до <br> +26 °C</div>
+                    <div class="text_s">По данным Краснодарского центра по гидрометеорологии и мониторингу окружающей
+                        среды, 26 июня теплее всего вода в Геленджике и в Новороссийске — 26 °C и 25 °C соответственно.
+                    </div>
+                    <div class="container4">
+                        <div class="date_news">26.06.2023</div>
+                        <div class="type_news">Общество</div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+        <div class="inf__panel">
+            <div class="box__info__panel">
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="{% static 'js/index.js' %}"></script>

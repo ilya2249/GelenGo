@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GelenGo/excursions</title>
+    <link rel="stylesheet" href="{% static 'css/style_exc.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+       
+        <div class="img-logo-home"><a href="{% url 'index' %}"><img src="{% static 'imgs/home.png'%}" width = "80px" height = "80px"></a></div>
+        <div class="text-name-exc">ПОДБОРКА ЭКСКУРСИЙ</div>
+        <div class="containers">
+            <div class="container a">
+                <div class="text a">Горы,</div>
+                <h2 id="rangeValue1">0</h2>
+                <div id="fillRangeValue1"></div>
+                <div class="box a">
+                    <span class="img-vector3"><img src="{% static 'imgs/4.png'%}" width = "70px" height = "70px"></span>
+                <input type="range" id ="r2" class="range" name="" value="0" min="0" max="100"
+                    onmousemove="rangeSlider1(this.value)" onChange="rangeSlider1(this.value)">
+            </div></div>
+            <div class="container b">
+                <div class="text b">Море,</div>
+                <h2 id="rangeValue2">0</h2>
+                <div id="fillRangeValue2"> </div>
+                <div class="box b">
+                    <span class="img-vector3"><img src="{% static 'imgs/3.png'%}" width = "70px" height = "70px"></span>
+                <input type="range"id ="r1" class="range" name="" value="0" min="0" max="100"
+                    onmousemove="rangeSlider2(this.value)" onChange="rangeSlider2(this.value)">
+            </div></div>
+            
+           
+           
+            <div class="container c">
+      
+                
+                <div class="text c">Активный,</div>
+                <h2 id="rangeValue3">0</h2>
+                <div id="fillRangeValue3"></div>
+                <div class="box c">
+                <span class="img-vector3"><img src="{% static 'imgs/1.png'%}" width = "70px" height = "70px"></span>
+              <input type="range" id ="r3" class="range" name="" value="0" min="0" max="100"
+                    onmousemove="rangeSlider3(this.value)" onChange="rangeSlider3(this.value)">
+            </div></div>
+            <div class="container d">
+                <div class="text d">Пассивный,</div>
+                <h2 id="rangeValue4">0</h2>
+                <div id="fillRangeValue4"> </div>
+                <div class="box d">
+                    <span class="img-vector3"><img src="{% static 'imgs/2.png'%}" width = "70px" height = "70px"></span>
+                
+                <input type="range" id ="r4"class="range" name="" value="0" min="0" max="100"
+                    onmousemove="rangeSlider4(this.value)" onChange="rangeSlider4(this.value)">
+            </div></div>
+            <button id="generateBtn" type="button"><div class="text_btn">СГЕНЕРИРОВАТЬ</div></button>
+        </div>
+        <div class="pie"></div>
+       
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </div>
+</body>
+
+</html>
+<script src="{% static 'js/exc.js' %}"></script>
